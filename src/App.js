@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [title1, SetTitle1] = useState("남자 코트 추천");
-  const [title2, SetTitle2] = useState("여자 코트 추천");
-  const [title3, SetTitle3] = useState("파이썬 독학");
+  const [title, SetTitle] = useState(["111111111", "222222222", "333333333"]);
+
+  const [like, SetLike] = useState(0);
 
   return (
     <div className="App">
@@ -12,15 +12,24 @@ function App() {
         <h4>ReactBlog</h4>
       </div>
       <div className="list">
-        <h4>{title1}</h4>
+        <h4>
+          {title[0]} <span>♥</span>
+          {like}
+        </h4>
         <p>글내용</p>
       </div>
       <div className="list">
-        <h4>{title2}</h4>
+        <h4>
+          {title[1]} <span>♥</span>
+          {like}
+        </h4>
         <p>글내용</p>
       </div>
       <div className="list">
-        <h4>{title3}</h4>
+        <h4>
+          {title[2]} <span>♥</span>
+          {like}
+        </h4>
         <p>글내용</p>
       </div>
     </div>
